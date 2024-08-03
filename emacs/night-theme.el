@@ -1,0 +1,51 @@
+(deftheme night "Clean night theme.")
+(let
+    (
+     (bg "grey15")
+     (fg "NavajoWhite")
+     (string "AntiqueWhite")
+     (comment "yellow")
+     (keyword "GhostWhite")
+     (pp "PaleGreen")
+     (select "SkyBlue4")
+     (constant "aquamarine2")
+    )
+  (custom-theme-set-faces
+   'night
+   
+   `(default                                ((t (:foreground ,fg :background ,bg))))
+
+   `(bold                                   ((t (:inherit default))))
+   `(italic                                 ((t (:inherit default))))
+   `(bold-italic                            ((t (:inherit default))))
+   `(underline                              ((t (:inherit default))))
+   `(fixed-pitch                            ((t (:inherit default))))
+   `(fixed-pitch-serif                      ((t (:inherit default))))
+   `(variable-pitch                         ((t (:inherit default))))
+   `(shadow                                 ((t (:inherit default))))
+
+   `(cursor                                 ((t (:inverse-video t))))
+
+   `(fringe                                 ((t (:background ,bg))))
+   `(region                                 ((t (:background ,select))))
+   `(line-number                            ((t (:inherit default))))
+   `(line-number-current-line               ((t (:inherit default))))
+
+   `(font-lock-builtin-face                 ((t (:inherit default))))
+   `(font-lock-comment-delimiter-face       ((t (:foreground ,comment))))
+   `(font-lock-comment-face                 ((t (:foreground ,comment))))
+   `(font-lock-constant-face                ((t (:foreground ,constant))))
+   `(font-lock-doc-face                     ((t (:inherit default))))
+   `(font-lock-function-name-face           ((t (:inherit default))))
+   `(font-lock-keyword-face                 ((t (:foreground ,keyword :bold t))))
+   `(font-lock-negation-char-face           ((t (:inherit default))))
+   `(font-lock-preprocessor-face            ((t (:foreground ,pp))))
+   `(font-lock-regexp-grouping-backslash    ((t (:inherit default))))
+   `(font-lock-regexp-grouping-construct    ((t (:inherit default))))
+   `(font-lock-string-face                  ((t (:foreground ,string))))
+   `(font-lock-type-face                    ((t (:inherit default :bold t))))
+   `(font-lock-variable-name-face           ((t (:inherit default))))
+   `(font-lock-warning-face                 ((t (:inherit default))))
+  )
+)
+(provide-theme 'night)
